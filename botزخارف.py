@@ -4,8 +4,12 @@
 import telebot
 import random
 
-TOKEN = "8667305559:AAF1yLYIHvXs5zUGf0b9Zd0MezIV7mV5jDM"
+from dotenv import load_dotenv
+import os
 
+load_dotenv()
+
+TOKEN = os.getenv("BOT_TOKEN")
 bot = telebot.TeleBot(TOKEN)
 
 # زخارف البداية والنهاية
